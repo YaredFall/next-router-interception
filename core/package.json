@@ -1,0 +1,40 @@
+{
+    "publishConfig": {
+        "access": "public"
+    },
+    "name": "@yaredfall/next-navigation-interception",
+    "version": "0.0.0",
+    "description": "",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        "import": "./dist/index.js",
+        "require": "./dist/index.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rm -rf dist && tsc -p tsconfig.build.json",
+        "release": "eslint . --fix && pnpm build && bumpp && pnpm publish"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "peerDependencies": {
+        "next": ">=14",
+        "react": ">=18"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@types/eslint__eslintrc": "^2",
+        "@types/react": ">=18",
+        "bumpp": "^9.10.0",
+        "eslint": "^9",
+        "next": ">=14",
+        "react": ">=18",
+        "typescript": "^5.7.3"
+    }
+}
