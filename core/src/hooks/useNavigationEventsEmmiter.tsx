@@ -114,7 +114,8 @@ function createHandlePopState(guard: () => Promise<boolean>, writeState: () => v
         const delta = nextIndex - renderedStateRef.current.index;
         // When go(-delta) is called, delta should be zero.
         if (delta === 0) {
-            return false;
+            // accept event if delta is 0
+            return true;
         }
 
         if (nextState === dispatchedState) {
