@@ -66,7 +66,6 @@ export const NavigationEventsEmitterProvider = ({
         const onPopState = async (event: PopStateEvent) => {
             if (!handlePopState(event.state)) {
                 event.stopImmediatePropagation();
-                console.log(event);
             }
         };
         const onBeforeOnload = async (event: BeforeUnloadEvent) => {
