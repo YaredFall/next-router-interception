@@ -1,8 +1,8 @@
 # next-navigation-interception
 
-> For Next.js with App Router
-
 Run callbacks before user navigation with ability to prevent navigation.
+
+> For Next.js 13+ with App Router
 
 ## Install
 
