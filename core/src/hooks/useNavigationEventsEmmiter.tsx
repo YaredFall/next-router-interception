@@ -90,7 +90,7 @@ export const NavigationEventsEmitterProvider = ({
 
     return (
         <AppRouterContext.Provider value={interceptedRouter}>
-            <NavigationEventsContext.Provider value={emitter}>{children}</NavigationEventsContext.Provider>;
+            <NavigationEventsContext.Provider value={emitter}>{children}</NavigationEventsContext.Provider>
         </AppRouterContext.Provider>
     );
 };
