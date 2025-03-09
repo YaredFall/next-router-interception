@@ -69,7 +69,7 @@ export default function mitt<Events extends Record<EventType, unknown>>(all?: Ev
         async emit<Key extends keyof Events>(type: Key, evt?: Events[Key]) {
             const handlers = all!.get(type);
             if (handlers) {
-                for (const handler of Array.from(handlers).reverse()) {
+                for (const handler of Array.from(handlers)) {
                     const shouldContinue = (await handler(evt!)) ?? true;
                     if (!shouldContinue) return false;
                 }
