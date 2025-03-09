@@ -2,6 +2,7 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import { NavigationInterceptionProvider } from "@yaredfall/next-navigation-interception";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -16,6 +17,16 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
+                <NavigationInterceptionProvider>
+                    <div className="flex gap-4">
+                        {["page1", "page2", "page3", "demo"].map((l) => (
+                            <Link key={l} href={"/" + l}>
+                                to {l}
+                            </Link>
+                        ))}
+                    </div>
+                    {children}
+                </NavigationInterceptionProvider>
             </body>
         </html>
     );
