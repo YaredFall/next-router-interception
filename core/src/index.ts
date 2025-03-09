@@ -1,2 +1,2 @@
 export { NavigationInterceptionProvider } from "./components/NavigationInterceptionProvider";
-export { useNavigationInterceptors } from "./hooks/useNavigationInterceptors";
+export { useNavigationInterceptors, type NavigationInterceptors } from "./hooks/useNavigationInterceptors";

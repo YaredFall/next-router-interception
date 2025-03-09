@@ -1,7 +1,7 @@
 import { useLayoutEffect } from "react";
 import { NavigationInterceptionEventHandlers, useNavigationEventsEmitter } from "./useNavigationEventsEmmiter";
 
-type NavigationInterceptors = {
+export type NavigationInterceptors = {
     [Key in keyof NavigationInterceptionEventHandlers as `on${Capitalize<Key>}`]?: NavigationInterceptionEventHandlers[Key];
 };
 
