@@ -3,7 +3,7 @@
         "access": "public"
     },
     "name": "@yaredfall/next-navigation-interception",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
