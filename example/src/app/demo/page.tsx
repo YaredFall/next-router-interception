@@ -19,6 +19,7 @@ export default function Page() {
         onForward: onBeforePageChange,
         onPush: onBeforePageChange,
         onReplace: onBeforePageChange,
+        onRefresh: onBeforePageChange,
     });
 
     return <div>User will be prompted before page leave</div>;
