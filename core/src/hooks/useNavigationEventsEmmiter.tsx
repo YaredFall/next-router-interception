@@ -70,7 +70,7 @@ export const NavigationEventsEmitterProvider = ({
             }
         };
         const onBeforeOnload = async (event: BeforeUnloadEvent) => {
-            const shouldContinue = await emitter.emit("beforeunload", { type: "popstate", args: [] });
+            const shouldContinue = await emitter.emit("beforeunload", { type: "beforeunload", args: [] });
             if (!shouldContinue) {
                 event.preventDefault();
                 // As MDN says, custom message has already been unsupported in majority of browsers.
